@@ -1,8 +1,13 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Container } from "@/components/ui/container";
-import { cn } from "@/lib/utils";
+import { Container } from "@/components/Container";
+import {
+	Avatar,
+	AvatarFallback,
+	AvatarImage,
+} from "@workspace/ui/components/avatar";
+import { cn } from "@workspace/ui/lib/utils";
+import { Clock4, Globe, Search, Smartphone } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -60,22 +65,29 @@ export function Header() {
 					<div className="w-full flex-1 md:w-auto md:flex-none">
 						{/* Search placeholder */}
 					</div>
-					<nav className="flex items-center text-lg font-medium text-white space-x-5">
-						<span className="transition-colors  hover:text-red-500">
+					<nav className="flex items-center font-medium text-white space-x-5">
+						<span className="flex flex-col items-center transition-colors cursor-pointer hover:text-red-500">
+							<Search className="h-5 w-5" />
 							Search
 						</span>
-						<span className="transition-colors  hover:text-red-500">
+						<span className="flex flex-col items-center transition-colors  cursor-pointer hover:text-red-500">
+							<Smartphone className="h-5 w-5" />
 							Download
 						</span>
-						<span className="transition-colors  hover:text-red-500">
+						<span className="flex flex-col items-center transition-colors  cursor-pointer hover:text-red-500">
+							<Clock4 className="h-5 w-5" />
 							History
 						</span>
-						<span className="transition-colors  hover:text-red-500">
+						<span className="flex item-center gap-1 transition-colors  cursor-pointer hover:text-red-500">
+							<Globe className="h-5 w-5" />
 							English
 						</span>
 						<span>
 							<Avatar>
-								<AvatarImage src="https://github.com/shadcn.png" />
+								<AvatarImage
+									src="https://github.com/shadcn.png"
+									alt="@shadcn"
+								/>
 								<AvatarFallback>CN</AvatarFallback>
 							</Avatar>
 						</span>

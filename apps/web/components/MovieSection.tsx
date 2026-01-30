@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@/components/ui/container";
+import { Container } from "@/components/Container";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Navigation } from "swiper/modules";

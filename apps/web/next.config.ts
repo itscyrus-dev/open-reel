@@ -1,15 +1,6 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-	/* config options here */
-	images: {
-		remotePatterns: [
-			{
-				protocol: "https",
-				hostname: "images.unsplash.com",
-			},
-		],
-	},
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	transpilePackages: ["@workspace/ui"],
 };
 
 export default nextConfig;
